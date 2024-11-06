@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
+import User from '@/views/User.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -15,6 +16,7 @@ const routes: RouteRecordRaw[] = [
     // which is lazy-loaded when the route is visited.
     component: () => import('@/views/AboutView.vue'),
   },
+  { path: '/users/:userId', component: User },
 ];
 
 const router = createRouter({
